@@ -9,6 +9,7 @@ urlpatterns = [
     path('regix/<xyz:parameter>',views.custompara,name="custompara"),#custom_converters
     re_path(r'^re/(?P<empid>[a-z]{4})/$',views.repath),#repath
     re_path(r'comments/(?:page-(?P<page_number>[0-9]+)/)?$',views.nested), #nested-arguments
-    path('blog',views.test,{'name':'shashi'})#passing parameters
+    path('blog',views.test,{'name':'shashi'}),#passing parameters
+    path('kwargs',views.kwaargs,{'one':'okay', 'two':'okayok'})
 
     ]

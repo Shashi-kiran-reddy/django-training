@@ -16,3 +16,12 @@ def nested(request,page_number):
     return HttpResponse("done with http response!!!! congoo")
 def test(request,name):
     return HttpResponse(name)
+def kwaargs(request,**args):
+    a = [0,0,0]
+    i=0
+    for  key,value in args.items():
+        a[i] = key
+        i=i+1
+    return HttpResponse(a)
+
+
